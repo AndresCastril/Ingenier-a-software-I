@@ -33,6 +33,9 @@
 .about-info li{
     color: aliceblue;
 }
+.about-info h2{
+    color: rgb(31, 150, 255);
+}
 .about-info h3{
     color: rgb(31, 150, 255);
     list-style: none;
