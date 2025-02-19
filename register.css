@@ -1,12 +1,33 @@
 .general{
     margin: 30px auto;
     margin-top: 40px;  
-    line-height: 1.6;
+    line-height: 1.8;
     background: #2c3e50;
     padding: 20px;
     border-radius: 10px;
-    width: 250px;
+    width: 350px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);   
+}
+.general label{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+.registro{
+    background: url('/imagenes/contacto.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex: 1;
+}
+.general a{
+        text-decoration: none;
+        color: #ecf0f1;
+        transition: all .3s ease;
+    }
+.general a:hover{
+    color: #f37f12;
 }
 

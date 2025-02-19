@@ -27,9 +27,9 @@
             </ul>
         </nav>
     </header>
-
-    <form class="general">
-        <h2>Formulario de Registro</h2>
+    <div class="registro">
+        <form id="registerForm" class="general">
+        <h2>Registro</h2>
 
         <label for="nombre">Nombre:</label>
         <input id="nombre" type="text" maxlength="100">
@@ -42,7 +42,7 @@
 
         <label for="edad">Edad:</label>
         <input id="edad" type="number" maxlength="1000">
-
+        
         <label for="genero">Género:</label>
         <select id="genero">
             <option value="">Seleccione...</option>
@@ -51,8 +51,31 @@
             <option value="otro">Otro</option>
         </select>
 
+        <label for="regPassword">Contraseña:</label>
+<input type="password" id="regPassword" required>
+        
+        <p> <br>ya iniciaste sesión?
+            <a href="/iniciar.html">iniciar sesión</a>
+        </p>
+        <br> <br>
         <button type="submit">Enviar</button>
     </form>
+</div>
+    <footer>
+        <nav>
+            <ul>
+                <li><p>contactanos</p>
+                    <a href="contact.html">• Contacto</a> 
+                    <br>
+                    <a href="about.html"> • Acerca de nosotros</a>
+                </li>
+                <li><p>©2025 TearlessTasks.</p></li>
+            </ul>
+        </nav>
+    </footer>
+    
+
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -21,3 +21,37 @@ window.addEventListener("scroll", () => {
         header.style.position = "relative";
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const registerForm = document.getElementById("registerForm");
+    const loginForm = document.getElementById("loginForm");
+
+    if (registerForm) {
+        registerForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const telefono = document.getElementById("telefono").value;
+            const edad = document.getElementById("edad").value;
+            const genero = document.getElementById("genero").value;
+            const password = document.getElementById("regPassword").value;
+            console.log("Registro:", { nombre, email, telefono, edad, genero });
+            alert("Registro exitoso!");
+        });
+    }
+
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("regEmail").value;
+            const password = document.getElementById("regPassword").value;
+
+            console.log("Inicio de sesión:", { email, password });
+            alert("Inicio de sesión exitoso!");
+        });
+    }
+});
+
+
+
+
