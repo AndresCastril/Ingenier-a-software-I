@@ -41,3 +41,15 @@
     max-width: 80%; 
     text-align: left;
 }
+header {
+    display: flex;  
+    align-items: center;  /* Centra verticalmente */
+    padding: 10px;
+}
+
+header img {
+    width: 100px; /* Ajusta el tamaño */
+    margin-top: 0px;
+    height: 80px;
+    margin-right: 20px; /* Espaciado a la derecha */
+}
