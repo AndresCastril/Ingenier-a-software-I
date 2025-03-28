@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="/imagenes/brainbook logo transparente.png" alt="Logotipo en el header">
+        <nav>
+            <ul>
+                <li><a href="/Home/home.html">Inicio</a></li>
+                <li><a href="/Herramientas/herramientas.html">Herramientas</a></li>
+                <li><a href="/About/about.html">Acerca de</a></li>
+                <li><a href="/Contact/contact.html">Contacto</a></li>
+                <li><a href="/Register/register.html" class="btn">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login">
+        <div class="formulario-tarjeta">
+            <form id="login-form" class="general">
+
+                <h2>Iniciar sesión</h2>
+                <br>
+
+                <label for="email-login">Correo Electrónico:</label>
+                <input type="email" id="email-login" required>
+
+                <label for="password-login">Contraseña:</label>
+                <input type="password" id="password-login" required>
+
+                <p>¿Primera vez aquí?
+                    <a href="/Register/register.html">Regístrate</a>
+                </p>
+                <br>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <p>Contáctanos</p>
+                    <a href="/Contact/contact.html">• Contacto</a>
+                    <br>
+                    <a href="/About/about.html">• Acerca de nosotros</a>
+                </li>
+                <li>
+                    <p>©2025 BrainBook.</p>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="login.js"></script>
+    <script src="/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+
+</html>

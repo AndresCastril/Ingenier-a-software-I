@@ -8,20 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Hacer que el menú sea fijo al hacer scroll
-    const header = document.querySelector(".header");
-    if (header) {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                header.style.position = "fixed";
-                header.style.top = "0";
-                header.style.width = "100%";
-                header.style.zIndex = "1000"; 
-            } else {
-                header.style.position = "relative";
-            }
-        });
-    }
+    
+
 
     
     const registerForm = document.getElementById("registerForm");
@@ -51,6 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+const onChangeText = ()=> {
+    const title = document.getElementById('title')
+    title.innerText = 'This is the new title'
+}
+
+const onGetData = async () => {
+    await fetch ('http://localhost:3366/api/v1/products')
+    .then((data) => data.json())
+    .then(info=>{
+        console.log('Array data', info);
+    })
+}
+
 
 
 

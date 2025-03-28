@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temario de Materias</title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <link rel="stylesheet" href="./temario.css">
+</head>
+<body>
+    <header class="header">
+    
+        <nav>
+            <ul>
+                <li><a href="/Home/home.html">Inicio</a></li>
+                <li><a href="/Herramientas/herramientas.html">Herramientas</a></li>
+                <li><a href="/About/about.html">Acerca de</a></li>
+                <li><a href="/Contact/contact.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <br>
+        <h1>Temarios</h1>
+        <br>
+        <div id="temarios"></div> 
+        <br>
+         <a href="#" id="btnMostrarFormulario" class="btn">Añadir Tema</a>
+       
+
+<br><br>
+
+
+    <div id="formularioTemario" class="formulario-tarjeta" style="display: none;">
+        <form id="formTemario">
+            <input type="text" id="materia" placeholder="Materia" required>
+            <input type="text" id="tema" placeholder="Tema" required>
+            <input type="text" id="descripcion" placeholder="Descripción" required>
+            <input type="number" id="semana" placeholder="Semana" required>
+            <button type="submit">Guardar Tema</button>
+        </form>
+    </div>
+    <br><br>
+    </main>
+    </main>
+  
+    
+
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <p>Contáctanos</p>
+                    <a href="/Contact/contact.html">• Contacto</a> 
+                    <br>
+                    <a href="About/about.html"> • Acerca de nosotros</a>
+                </li>
+                <li><p>©2025 BrainBook.</p></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="/Temario/temario.js"></script>
+    <script src="/Temario/agregarTemario.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <link rel="stylesheet" href="./register.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="/imagenes/brainbook logo transparente.png" alt="Logotipo en el header">.
+        <nav>
+            <ul>
+                <li><a href="/Home/home.html">Inicio</a></li>
+
+                <li><a href="/Herramientas/herramientas.html">Herramientas</a></li>
+                <li>
+                    <a href="/About/about.html">Acerca de</a>
+                </li>
+                <li>
+                    <a href="/Contact/contact.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="/Login/login.html" class="btn">Iniciar sesión</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="registro">
+        <div class="formulario-tarjeta">
+            <form id="register-form" class="general" onsubmit="onSaveInfo(event)">
+
+                <h2>Registro</h2>
+    
+                <label for="name-Register">Nombre:</label>
+                <input id="name-Register" type="text" maxlength="100">
+    
+                <label for="user-Register">Usuario:</label>
+                <input id="user-Register" type="text" maxlength="100">
+    
+                <label for="email-Register">Correo Electrónico:</label>
+                <input id="email-Register" type="email" maxlength="1000">
+    
+                <label for="password-Register">Contraseña:</label>
+                <input type="password" id="password-Register" required>
+    
+                <p><br>¿Ya iniciaste sesión?
+                    <a href="/Login/login.html">Iniciar sesión</a>
+                </p>
+                <br>
+    
+                <button class = btn type="submit">Enviar</button>
+
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <p>contactanos</p>
+                    <a href="/Contact/contact.html">• Contacto</a>
+                    <br>
+                    <a href="About/about.html"> • Acerca de nosotros</a>
+                </li>
+                <li>
+                    <p>©2025 BrainBook.</p>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+
+    <script src="register.js"></script>
+    <script src="/register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 .features {
-    display: flex; /* Usa flexbox para alinear mejor */
-    flex-wrap: wrap; /* Permite que los elementos se acomoden si no caben */
+    display: flex; 
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 20px;
     margin-top: 50px;
@@ -35,20 +35,20 @@
 }
 
 .texto-delante {
-    position: relative; /* Asegura que respete el flujo normal */
-    z-index: 10; /* Mayor que el cuadro de apuntes */
-    font-weight: bold; /* Opcional: resalta el texto */
-    color: white; /* Ajusta el color según el fondo */
+    position: relative; 
+    z-index: 10;
+    font-weight: bold;
+    color: white;
 }
 header {
     display: flex;  
-    align-items: center;  /* Centra verticalmente */
+    align-items: center;
     padding: 10px;
 }
 
 header img {
-    width: 100px; /* Ajusta el tamaño */
+    width: 100px; 
     margin-top: 0px;
     height: 80px;
-    margin-right: 20px; /* Espaciado a la derecha */
+    margin-right: 20px; 
 }
