@@ -1,3 +1,21 @@
+const pass = document.getElementById("password-login"),
+      icon = document.querySelector(".bx");
+
+icon.addEventListener("click", e => {
+    if (pass.type === "password"){
+        pass.type = "text";
+        icon.classList.remove('bx-show-alt')
+        icon.classList.add('bx-hide')
+    } else {
+        pass.type = "password"
+        icon.classList.remove('bx-hide')
+        icon.classList.add('bx-show-alt')
+    }
+})
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('login-form');
 
