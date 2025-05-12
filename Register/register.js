@@ -1,3 +1,21 @@
+const pass = document.getElementById("password-Register"),
+      icon = document.querySelector(".bx");
+
+icon.addEventListener("click", e => {
+    if (pass.type === "password"){
+        pass.type = "text";
+        icon.classList.remove('bx-show-alt')
+        icon.classList.add('bx-hide')
+    } else {
+        pass.type = "password"
+        icon.classList.remove('bx-hide')
+        icon.classList.add('bx-show-alt')
+    }
+})
+
+
+
+
 const url = 'http://localhost:3366/api/v1';
 
 const onSaveInfo = (event) => {

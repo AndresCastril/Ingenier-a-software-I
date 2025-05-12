@@ -42,4 +42,40 @@ header img {
     height: 80px;
     margin-right: 20px; /* Espaciado a la derecha */
 }
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-wrapper,
+.password-container {
+    position: relative;
+    display: inline-block;
+    width: 60%; /* Ajusta esto según prefieras */
+    max-width: 300px;
+}
+
+.input-wrapper input,
+.password-container input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos del icono de la contraseña */
+.password-container i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #252222;
+    font-size: 20px;
+}
 
