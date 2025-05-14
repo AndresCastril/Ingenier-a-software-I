@@ -70,13 +70,17 @@ const onSaveInfo = (event) => {
                 text: "¡Tu cuenta ha sido creada correctamente!",
                 icon: "success",
                 confirmButtonColor: "#394a5c"
+            }).then(() => {
+                // Guardar token directamente si se recibe
+                if (data.token) {
+                    localStorage.setItem("token", data.token);
+                    window.location.href = "/Home/home.html";
+                } else {
+                    // Si no hay token, redirigir al login
+                    window.location.href = "/Login/login.html";
+                }
             });
-
         }
-
-        
-        
     })
-    
     .catch(e => console.error("Error en la petición:", e));
-}
+};

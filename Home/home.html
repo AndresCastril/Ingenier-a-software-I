@@ -12,33 +12,44 @@
 </head>
 <body>
 
-    <header class="header">
-        <img src="/imagenes/brainbook logo transparente.png" alt="Logotipo en el header">.
-        <nav>
-            <ul>
-                <li><a href="home.html">Inicio</a></li>
-                
-                <li><a href="/Herramientas/herramientas.html">Herramientas</a></li>
-                <li>
-                    <a href="/About/about.html">Acerca de</a>
-                </li>
-                <li>
-                    <a href="/Contact/contact.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+   <header class="header">
+    <img src="/imagenes/brainbook logo transparente.png" alt="Logotipo en el header">
+    <nav>
+        <ul>
+            <li><a href="home.html">Inicio</a></li>
+            
+            <li><a href="/Herramientas/herramientas.html" class="profile-links" style="display:none;">Herramientas</a></li>
+            <li><a href="/Clases/clases.html" class="profile-links" style="display:none;">Clases</a></li>
+            <li><a href="/Temarios/temarios.html" class="profile-links" style="display:none;">Temarios</a></li>
+            <li><a href="/Perfil/perfil.html" class="profile-links" style="display:none;">Perfil</a></li>
+
+            <!-- Enlaces visibles si no hay token -->
+            <li>
+                <a href="/About/about.html">Acerca de</a>
+            </li>
+            <li>
+                <a href="/Contact/contact.html">Contacto</a>
+            </li>
+            <li class="login-links"><a href="/Login/login.html" class="btn">Iniciar sesión</a></li>
+            <li class="login-links"><a href="/Register/register.html" class="btn">Registrar</a></li>
+        </ul>
+    </nav>
+</header>
 
     <main class="contacto-cont">
        
-        <section class="encabezado">
-            <h1>Bienvenido a tu Plataforma de Aprendizaje</h1>
-            <p>Estudia de manera más eficiente con herramientas de inteligencia artificial.</p>
-            <a href="/Register/register.html" class="btn">Registrar</a>
-            <a href="/Login/login.html" class="btn">Iniciar sesión</a>
-            
+       <section class="encabezado" id="header-section">
+    <h1>Bienvenido a tu Plataforma de Aprendizaje</h1>
+    <p>Estudia de manera más eficiente con herramientas de inteligencia artificial.</p>
 
-        </section>
+    <!-- Enlaces que solo aparecerán si NO hay token -->
+    <a href="/Register/register.html" class="btn" id="register-btn" style="display:none;">Registrar</a>
+    <a href="/Login/login.html" class="btn" id="login-btn" style="display:none;">Iniciar sesión</a>
+
+    <!-- Enlaces que solo aparecerán si hay un token -->
+    <a href="/Herramientas/herramientas.html" class="btn" id="tools-btn" style="display:none;">Herramientas</a>
+    <a href="/Perfil/perfil.html" class="btn" id="profile-btn" style="display:none;">Perfil</a>
+</section>
         
         <section class="features">
             <article class="feature">
@@ -85,7 +96,7 @@
     <script src="/script.js"></script>
     <script src="/Home/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./inicio.js"></script>
+
     
 
 </body>

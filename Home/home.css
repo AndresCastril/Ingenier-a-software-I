@@ -54,3 +54,27 @@ header img {
     height: 80px;
     margin-right: 20px; /* Espaciado a la derecha */
 }
+
+
+
+.btn {
+    text-align: center;
+    color: #ffffff;
+    background-color: #f37f12;
+    padding: 15px 25px;  /* Menor padding para hacerlo más pequeño */
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin: 5px;  /* Espacio entre los botones */
+    
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;  /* Asegura que los botones estén en una columna */
+    align-items: center;  /* Centra los elementos */
+    gap: 10px;  /* Espacio entre el texto y los botones */
+    margin-top: 20px;
+}
+
