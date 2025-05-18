@@ -7,8 +7,7 @@
 }
 
 .features {
-    margin-top: 0
-    ; /* Ajusta este valor según sea necesario para mover el contenido hacia abajo */
+    margin-top: 0; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
