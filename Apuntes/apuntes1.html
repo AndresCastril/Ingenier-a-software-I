@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        #editor {
+            width: 100%;
+            min-height: 500px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .save-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .save-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="/Home/home.html">Inicio</a></li>
+                <li><a href="/Herramientas/herramientas.html">Herramientas</a></li>
+                <li><a href="/About/about.html">Acerca de</a></li>
+                <li><a href="/Contact/contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <h1>Apuntes</h1>
+        <div id="editor" contenteditable="true"></div>
+        <button class="btn" onclick="guardarApuntes()">Guardar Apuntes</button>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <p>Contáctanos</p>
+                    <a href="/Contact/contact.html">• Contacto</a>
+                    <br>
+                    <a href="About/about.html"> • Acerca de nosotros</a>
+                </li>
+                <li><p>©2025 BrainBook.</p></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="/Apuntes/apuntes.js"></script>
+</body>
+</html>
+

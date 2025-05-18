@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat con IA - BrainBook</title>
+  <link rel="stylesheet" href="chat.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>💬 Chat Inteligente BrainBook</h1>
+    <p>Interactúa con nuestra IA para mejorar tu aprendizaje.</p>
+   
+    <nav>
+        <ul>
+            <li><a href="/Home/home.html">Inicio</a></li>
+    
+           
+            <li>
+                <a href="/About/about.html">Acerca de</a>
+            </li>
+            <li>
+                <a href="/Contact/contact.html">Contacto</a>
+            </li>
+            <li><a href="/Herramientas/herramientas.html">Herramientas</a></li>
+            <li><a href="/Clases/clases.html" class="profile-links" style="display:none;">Clases</a></li>
+            <li><a href="/Temarios/temarios.html">Temarios</a></li>
+            <li><a href="/Perfil/perfil.html" class="profile-links" style="display:none;">Perfil</a></li>
+        </ul>
+  </header>
+
+  <main class="chat-container">
+    <div id="chat-history" class="chat-history">
+
+    </div>
+
+    <form id="chat-form" class="chat-form">
+      <input type="text" id="mensaje" placeholder="Escribe tu mensaje..." autocomplete="off" required />
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("mensaje");
+    const chatHistory = document.getElementById("chat-history");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const mensaje = input.value.trim();
+      if (!mensaje) return;
+
+      agregarMensaje("user", mensaje);
+      input.value = "";
+
+      const loadingMsg = agregarMensaje("loading", "Escribiendo...");
+
+      try {
+        const res = await fetch("http://localhost:3000/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ mensaje })
+        });
+
+        const data = await res.json();
+        chatHistory.removeChild(loadingMsg);
+
+        if (res.ok && data.respuesta) {
+          agregarMensaje("ai", data.respuesta);
+        } else {
+          agregarMensaje("ai", " Error al obtener respuesta.");
+        }
+      } catch (error) {
+        chatHistory.removeChild(loadingMsg);
+        agregarMensaje("ai", " No se pudo conectar con el servidor.");
+        console.error("Error:", error);
+      }
+    });
+
+    function agregarMensaje(tipo, texto) {
+      const div = document.createElement("div");
+      div.className = tipo === "loading" ? "loading" : `message ${tipo}`;
+      div.textContent = texto;
+      chatHistory.appendChild(div);
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+      return div;
+    }
+  </script>
+
+  
+</body>
+</html>
