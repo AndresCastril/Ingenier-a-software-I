@@ -3,10 +3,13 @@ const cors = require("cors");
 const fetch = require("node-fetch");
 const fs = require("fs");
 
-const API_KEY = "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";
+require('dotenv').config();
+
+const API_KEY = process.env.OPENROUTER_API_KEY;
+
 
 if (!API_KEY) {
-  console.error("❌ No se encontró la clave API. Por favor, verifica.");
+  console.error(" No se encontró la clave API. Por favor, verifica.");
   process.exit(1);
 }
 
@@ -18,7 +21,7 @@ app.use(express.json());
 
 app.post("/api/chat", async (req, res) => {
   const { mensaje } = req.body;
-  console.log("📩 Mensaje recibido del cliente:", mensaje);
+  console.log(" Mensaje recibido del cliente:", mensaje);
 
   try {
     const respuesta = await fetch("https://openrouter.ai/api/v1/chat/completions", {
@@ -37,20 +40,20 @@ app.post("/api/chat", async (req, res) => {
     });
 
     const datos = await respuesta.json();
-    console.log("✅ Respuesta de OpenRouter:", datos);
+    console.log(" Respuesta de OpenRouter:", datos);
 
     if (respuesta.ok && datos.choices && datos.choices.length > 0) {
       res.json({ respuesta: datos.choices[0].message.content });
     } else {
-      console.error("❌ Error en la respuesta de OpenRouter:", datos);
+      console.error(" Error en la respuesta de OpenRouter:", datos);
       res.status(500).json({ error: "Respuesta inválida de OpenRouter" });
     }
   } catch (error) {
-    console.error("❌ Error al contactar con OpenRouter:", error);
+    console.error(" Error al contactar con OpenRouter:", error);
     res.status(500).json({ error: "Error al procesar la solicitud" });
   }
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Servidor backend ejecutándose en http://localhost:${PORT}`);
+  console.log(` Servidor backend ejecutándose en http://localhost:${PORT}`);
 });
