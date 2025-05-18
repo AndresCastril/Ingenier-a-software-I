@@ -1,0 +1,23 @@
+[33m0c6f518[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit: Normalizar finales de línea
+[33md7dae37[m HEAD@{1}: commit: Perfil hecho sin funciones
+[33mc0ecf2e[m HEAD@{2}: commit: Normalizar finales de línea a LF
+[33m71da64b[m HEAD@{3}: commit: Ignorar correctamente node_modules
+[33me690e37[m HEAD@{4}: reset: moving to HEAD
+[33me690e37[m HEAD@{5}: commit: Home para logueados y cerrar sesión en perfil
+[33m118885b[m HEAD@{6}: commit: Se creo la carpeta perfil
+[33m4475e34[m HEAD@{7}: commit: Se añadieron los tokens y verificaiones para los tokens
+[33ma0f9121[m HEAD@{8}: commit: Ojo de contraseña en login
+[33m9dbaba6[m HEAD@{9}: commit: Se corrigió partes del css y se hizo el ojo de visibilidad de contraseña para el register
+[33m9a3fad6[m HEAD@{10}: commit: Se empezó el HomeLogin
+[33md4526d6[m HEAD@{11}: commit: Eliminando enlace simbólico
+[33mf360a09[m HEAD@{12}: commit: Se organizaron las carpetas
+[33m9a956d1[m HEAD@{13}: commit: Añadiendo enlace simbólico a api-general
+[33m07f3435[m HEAD@{14}: commit: Se arregló error de sintaxis
+[33m1b6fe8a[m HEAD@{15}: commit (merge): Se arregló problema de contact
+[33mc020f45[m HEAD@{16}: commit: Se añadió la vista apuntes
+[33m38598a1[m HEAD@{17}: commit: Script SwitAlert2 incluido
+[33m2527c90[m HEAD@{18}: commit: herramientas hecho
+[33me3f35b1[m HEAD@{19}: commit: vistas de acerca de y contacto terminadas, junto a iniciar sesión y registro (solo diseño)
+[33m6246c34[m HEAD@{20}: commit: header y footer hecho en cada una de las vistas
+[33m177ce2f[m HEAD@{21}: commit: Home con footer terminado
+[33m8d30f2c[m HEAD@{22}: commit (initial): Home y encabezado empezados

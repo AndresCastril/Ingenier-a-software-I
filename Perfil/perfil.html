@@ -3,51 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tú perfil</title>
+    <title>Tu Perfil</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="./perfil.css">
 </head>
 <body>
     <header class="header">
-        <img src="/imagenes/brainbook logo transparente.png" alt="Logotipo en el header">.
+        <img src="/imagenes/brainbook logo transparente.png" alt="Logotipo en el header">
         <nav>
             <ul>
                 <li><a href="/Home/home.html">Inicio</a></li>
-                
                 <li><a href="/Herramientas/herramientas.html">Herramientas</a></li>
-                <li>
-                    <a href="/About/about.html">Acerca de</a>
-                </li>
-                <li>
-                    <a href="/Contact/contact.html">Contacto</a>
-                </li>
+                <li><a href="/About/about.html">Acerca de</a></li>
+                <li><a href="/Contact/contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
+   <main class="perfil">
+    <section class="profile-section">
+       
+        <img id="profile-image" src="/imagenes/perfil.jpg" alt="Foto de perfil" class="profile-picture">
 
+        <h1>Nombre Completo</h1>
+        <h2 id="fullname">Nombre completo</h2>
 
-    <main class="acerca">
-        <section class="about-info">
-           <button id="logout-btn" style="display: none;">Cerrar sesión</button>
-        </section>
-    </main>
+        <h1>Descripción Personal</h1>
+        <h2 id="description">Descripción personal</h2>
+
+        <h1>Información de Contacto</h1>
+        <ul>
+            <li><strong>Correo electrónico:</strong> <span id="email">Correo electrónico</span></li>
+            <li><strong>Nombre de usuario:</strong> <span id="user">Nombre de usuario</span></li>
+        </ul>
+
+        <button class="btn" id="logout-btn">Cerrar sesión</button>
+        <br>
+        <button class="btn" id="edit-btn">Editar perfil</button>
+    </section>
+</main>
+
 
     <footer>
         <nav>
             <ul>
-                <li><p>contactanos</p>
-                    <a href="/Contact/contact.html">• Contacto</a> 
-                    <br>
+                <li><p>Contáctanos</p>
+                    <a href="/Contact/contact.html">• Contacto</a><br>
                     <a href="/About/about.html"> • Acerca de nosotros</a>
                 </li>
                 <li><p>©2025 BrainBook.</p></li>
             </ul>
         </nav>
     </footer>
-    
-
-   
 
     <script src="/Perfil/perfil.js"></script>
 </body>

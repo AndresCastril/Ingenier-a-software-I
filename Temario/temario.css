@@ -1,89 +1,49 @@
-
-.contenido{
+.contenido {
     background: url('/imagenes/encabezado.png') no-repeat center center;
     text-align: center;
-    
 }
+
 .temario {
     background: url('/imagenes/contacto.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
     gap: 50px;
-    
 }
 
-
-.temario-info {
-    background: #2c3e50;
-    padding: 20px;
-    border-radius: 10px;
-    width: 600px;
-    margin-top: 50px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    line-height: 1.8;
-}
-
-.temario-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.temario-info li {
-    color: aliceblue;
-    font-size: 16px;
-    padding: 5px 0;
-}
-
-.temario-info h2 {
-    color: rgb(31, 150, 255);
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.temario-info h3 {
-    color: rgb(31, 150, 255);
-    font-size: 22px;
-    margin-top: 20px;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
 #temarios {
     color: #d1cfcf;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben */
+    gap: 30px; /* Aumenta el espacio entre elementos */
     justify-content: center;
+    padding: 20px; /* Añade padding alrededor del contenedor */
 }
 
-#temarios li {
+#temarios a {
     background: #2c3e50;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    width: 250px;
+    width: 250px; /* Ancho fijo para cada elemento */
     text-align: center;
     transition: transform 0.3s;
-    list-style: none; 
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    margin: 10px; /* Margen alrededor de cada elemento */
 }
 
-#temarios li:hover {
+#temarios a:hover {
     transform: scale(1.05);
 }
 
-#temarios li strong {
+#temarios a strong {
     color: #3498db;
     font-size: 20px;
 }
 
-.contenido h1{
+.contenido h1 {
     text-align: center;
 }
 
@@ -102,11 +62,9 @@ header {
     line-height: 1.8;
 }
 
-
 .formulario-tarjeta input,
 .formulario-tarjeta select,
 .formulario-tarjeta button {
-    
     width: 90%;
     padding: 10px;
     margin: 10px 0;
@@ -127,8 +85,49 @@ header {
     background: #d35400;
 }
 
-
 .formulario-tarjeta.mostrar {
     display: block;
 }
 
+
+.temario-card {
+    display: block;
+    width: 250px; 
+    text-decoration: none; /* quita subrayado */
+    color: inherit; /* hereda color de texto */
+    transition: transform 0.3s,
+}
+
+
+        .edit-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .guardar-btn {
+            background-color: #e67e22;
+            color: white;
+        }
+        .cancelar-btn {
+            background-color: #f44336;
+            color: white;
+        }
