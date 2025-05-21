@@ -57,6 +57,36 @@ document.getElementById("generar").addEventListener("click", async () => {
   document.getElementById("evaluar").classList.remove("oculto");
 });
 
+// Generación de resumen
+document.getElementById("resumir").addEventListener("click", async () => {
+  const apuntes = document.getElementById("apuntes").value.trim();
+  if (!apuntes) return alert("Por favor, pega tus apuntes o sube un archivo.");
+
+  const cargando = document.getElementById("cargando");
+  cargando.textContent = "⏳ Generando resumen...";
+  cargando.classList.remove("oculto");
+
+  const res = await fetch("http://localhost:3000/api/generar-resumen", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ apuntes })
+  });
+
+  const data = await res.json();
+  cargando.classList.add("oculto");
+
+  if (!data.resumen) {
+    alert("No se pudo generar el resumen.");
+    return;
+  }
+
+  document.getElementById("cuestionario").innerHTML =
+    `<div class="pregunta"><strong>📘 Resumen generado:</strong><p>${data.resumen}</p></div>`;
+  document.getElementById("evaluar").classList.add("oculto");
+  document.getElementById("resultado").innerText = "";
+});
+
+
 // Evaluación
 document.getElementById("evaluar").addEventListener("click", () => {
   const cuestionario = document.getElementById("cuestionario");
@@ -72,5 +102,7 @@ document.getElementById("evaluar").addEventListener("click", () => {
 
   const total = preguntas.length;
   document.getElementById("resultado").innerText =
-    ` Obtuviste ${correctas} de ${total} respuestas correctas.`;
+    `✅ Obtuviste ${correctas} de ${total} respuestas correctas.`;
 });
+
+
