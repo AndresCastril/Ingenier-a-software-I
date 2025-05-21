@@ -1,69 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de ...</title>
-    <link rel="stylesheet" href="/style.css">
-    
-    <link rel="stylesheet" href="./apuntes.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apuntes</title>
+    <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
     <header class="header">
         <nav>
             <ul>
                 <li><a href="/Home/home.html">Inicio</a></li>
-                
                 <li><a href="/Herramientas/herramientas.html">Herramientas</a></li>
-                <li>
-                    <a href="/About/about.html">Acerca de</a>
-                </li>
-                <li>
-                    <a href="/Contact/contact.html">Contacto</a>
-                </li>
+                <li><a href="/About/about.html">Acerca de</a></li>
+                <li><a href="/Contact/contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <section class="Barra_Izquierda">
-        <div class="barra">
-            <br>
-            <br>
-            <article>
-                <a href="" class="btn">nuevo</a>
-            </article>
-            <br>
-            <div class="chat">Chat 1</div>
-            <div class="chat">Chat 2</div>
-            <div class="chat">Chat 3</div>
+
+    <main class="contenido">
+        <h1>Apuntes</h1>
+        <div class="editor-wrapper">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Título del apunte" />
+            <label for="resumen">Resumen:</label>
+            <textarea id="resumen" name="resumen" rows="3" placeholder="Resumen del apunte"></textarea>
+            <!-- Aquí se cargan los apuntes y es editable -->
+            <div id="editor" contenteditable="true" style="min-height: 200px; border: 1px solid #ccc; padding: 10px;"></div>
+            <button class="btn guardar-apuntes">Guardar Apuntes</button>
         </div>
-    
-        <div class="contenido">
-            <div class="opciones">
-                <h3>Formato de apuntes</h3>
-                <label><input type="checkbox"> Texto</label>
-                <label><input type="checkbox"> Tarjetas</label>
-                <label><input type="checkbox"> Presentación</label>
-                <label><input type="checkbox"> Palabras clave</label>
-            </div>
-            <div class="mensajes">
-                <a href="" class="btn">Plan de estudio inteligente</a>
-                <a href="/Temario/temario.html" class="btn">Temario</a>
-                <br>
-                <br>
-                <p>Aquí van los mensajes del chat</p>
-            </div>
-            <div class="input-container">
-                <input type="text" placeholder="Escribe un mensaje...">
-                <button>📎</button>
-                <button>Enviar</button>
-            </div>
-        </div>
-    </div>
+    </main>
 
-    
-    </section>
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <p>Contáctanos</p>
+                    <a href="/Contact/contact.html">• Contacto</a><br />
+                    <a href="About/about.html">• Acerca de nosotros</a>
+                </li>
+                <li><p>©2025 BrainBook.</p></li>
+            </ul>
+        </nav>
+    </footer>
 
-
-    <script src="/apuntes.js"></script>
+    <script src="/Apuntes/apuntes.js"></script>
 </body>
 </html>

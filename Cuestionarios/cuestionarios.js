@@ -72,5 +72,5 @@ document.getElementById("evaluar").addEventListener("click", () => {
 
   const total = preguntas.length;
   document.getElementById("resultado").innerText =
-    `✅ Obtuviste ${correctas} de ${total} respuestas correctas.`;
+    ` Obtuviste ${correctas} de ${total} respuestas correctas.`;
 });
