@@ -46,20 +46,52 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         // Listener para botones editar y eliminar dentro de las tarjetas
-        listaTemarios.addEventListener("click", (event) => {
+        listaTemarios.addEventListener("click", async (event) => {
             const id = event.target.dataset.id;
-
+            // Botón editar
             if (event.target.classList.contains("editar-btn")) {
                 event.preventDefault();
                 event.stopPropagation(); // evitar que el link se active
                 const temarioElement = event.target.closest(".temario-container");
                 editarTemario(id, temarioElement);
+                return;
             }
-
+            // Botón eliminar
             if (event.target.classList.contains("eliminar-btn")) {
                 event.preventDefault();
                 event.stopPropagation();
                 eliminarTemario(id);
+                return;
+            }
+            // Click en la tarjeta (no en los botones)
+            const card = event.target.closest(".temario-card");
+            if (card && !event.target.classList.contains("editar-btn") && !event.target.classList.contains("eliminar-btn")) {
+                event.preventDefault();
+                const urlParams = new URL(card.href);
+                const id_temario = urlParams.searchParams.get("id");
+                const token = localStorage.getItem("token");
+                try {
+                    // Buscar apunte para este temario SOLO usando el id_temario
+                    const res = await fetch(`http://localhost:3366/api/v1/apuntes/${id_temario}`, {
+                        headers: { "Authorization": `Bearer ${token}` }
+                    });
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data && data.length > 0) {
+                            // Si hay apunte, redirige con id_apuntes
+                            const id_apuntes = data[0].id_apuntes;
+                            window.location.href = `/Apuntes/apuntes.html?id=${id_temario}&apunte=${id_apuntes}`;
+                        } else {
+                            // Si no hay apunte, redirige solo con id_temario
+                            window.location.href = `/Apuntes/apuntes.html?id=${id_temario}`;
+                        }
+                    } else {
+                        // Si error, igual redirige solo con id_temario
+                        window.location.href = `/Apuntes/apuntes.html?id=${id_temario}`;
+                    }
+                } catch (err) {
+                    window.location.href = `/Apuntes/apuntes.html?id=${id_temario}`;
+                }
             }
         });
 

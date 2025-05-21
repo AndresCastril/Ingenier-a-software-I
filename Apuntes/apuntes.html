@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Apuntes</title>
     <link rel="stylesheet" href="/style.css" />
+     <link rel="stylesheet" href="apuntes.css" />
 </head>
 <body>
     <header class="header">
@@ -20,14 +21,15 @@
 
     <main class="contenido">
         <h1>Apuntes</h1>
+        <br>
         <div class="editor-wrapper">
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" name="titulo" placeholder="Título del apunte" />
             <label for="resumen">Resumen:</label>
             <textarea id="resumen" name="resumen" rows="3" placeholder="Resumen del apunte"></textarea>
-            <!-- Aquí se cargan los apuntes y es editable -->
-            <div id="editor" contenteditable="true" style="min-height: 200px; border: 1px solid #ccc; padding: 10px;"></div>
             <button class="btn guardar-apuntes">Guardar Apuntes</button>
+            <div id="editor" contenteditable="true" style="min-height: 200px; border: 1px solid #161515; padding: 10px;"></div>
+            
         </div>
     </main>
 

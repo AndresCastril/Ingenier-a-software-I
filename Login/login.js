@@ -50,7 +50,7 @@ const onLogin = async (e) => {
             });
 
             setTimeout(() => {
-                window.location.href = "/Home/home.html"; // Redirigir al Home para usuarios logueados (Por el momento)
+                window.location.href = "/Home/home.html"; 
             }, 2000);
         } else {
             Swal.fire({
