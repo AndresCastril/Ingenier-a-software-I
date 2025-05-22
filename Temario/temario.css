@@ -131,3 +131,13 @@
             background-color: #f44336;
             color: white;
         }
+
+.temario-titulo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 4px #222;
+}

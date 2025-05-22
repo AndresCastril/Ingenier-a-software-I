@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-        window.location.href = "/login.html"; // Redirige si no hay token
+        window.location.href = "/login.html"; 
         return;
     }
 
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             link.innerHTML = `
                 <div class="temario-info">
+                    <span class="temario-titulo">${temario.tema}</span>
                     <strong>Materia:</strong> ${temario.materia}<br>
-                    <strong>Tema:</strong> ${temario.tema}<br>
                     <strong>Descripción:</strong> ${temario.descripcion}<br>
                     <strong>Semana:</strong> ${temario.semana}<br>
                     <button class="btn editar-btn" data-id="${temario.id_temario}">Editar</button>
@@ -78,15 +78,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                     if (res.ok) {
                         const data = await res.json();
                         if (data && data.length > 0) {
-                            // Si hay apunte, redirige con id_apuntes
+
                             const id_apuntes = data[0].id_apuntes;
                             window.location.href = `/Apuntes/apuntes.html?id=${id_temario}&apunte=${id_apuntes}`;
                         } else {
-                            // Si no hay apunte, redirige solo con id_temario
+                            
                             window.location.href = `/Apuntes/apuntes.html?id=${id_temario}`;
                         }
                     } else {
-                        // Si error, igual redirige solo con id_temario
+                    
                         window.location.href = `/Apuntes/apuntes.html?id=${id_temario}`;
                     }
                 } catch (err) {
@@ -105,11 +105,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 function editarTemario(id_temario, temarioElement) {
     const infoDiv = temarioElement.querySelector(".temario-info");
 
+    // Selecciona el tema desde el span.temario-titulo
+    const tema = infoDiv.querySelector(".temario-titulo").textContent.trim();
     const strongs = infoDiv.querySelectorAll("strong");
     const materia = strongs[0].nextSibling.textContent.trim();
-    const tema = strongs[1].nextSibling.textContent.trim();
-    const descripcion = strongs[2].nextSibling.textContent.trim();
-    const semana = strongs[3].nextSibling.textContent.trim();
+    const descripcion = strongs[1].nextSibling.textContent.trim();
+    const semana = strongs[2].nextSibling.textContent.trim();
 
     const form = document.createElement("form");
     form.classList.add("edit-form");

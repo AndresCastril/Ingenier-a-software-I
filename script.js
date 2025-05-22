@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     links.forEach(link => {
         if (link.href === window.location.href) {
             link.style.color = "#f37f12"; 
-            link.style.fontWeight = "bold"; // Resalta la página actual
+            link.style.fontWeight = "bold"; 
         }
     });
 

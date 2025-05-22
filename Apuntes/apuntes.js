@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else {
             try {
                 const data = JSON.parse(responseText);
-                // Si el backend devuelve un objeto, conviértelo en array
+               
                 let apuntesArray = Array.isArray(data) ? data : (data.data || data.apuntes || [data]);
                 if (Array.isArray(apuntesArray) && apuntesArray.length > 0) {
                     const apunte = apuntesArray[0];
